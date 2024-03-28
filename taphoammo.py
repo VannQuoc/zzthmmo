@@ -3,7 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
+csrf_token = zzvanquocZZ
 @app.route('/')
 def abc():
     return "Api By Mon Leo Hay Khok Telegram @Monleohaykhok"
@@ -40,7 +41,6 @@ def get_cookies():
             csrf_meta_tag = soup.find('meta', {'name': '_csrf'})
             if csrf_meta_tag:
                 csrf_token = csrf_meta_tag['content']
-                print(csrf_token)
             headers = {
 				'accept': 'text/plain, */*; q=0.01',
 				'accept-language': 'en-US,en;q=0.9',
