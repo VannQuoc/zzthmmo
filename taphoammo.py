@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 app.debug = False
-csrf_token = zzvanquocZZ
+csrf_token = None 
 @app.route('/')
 def abc():
     return "Api By Mon Leo Hay Khok Telegram @Monleohaykhok"
